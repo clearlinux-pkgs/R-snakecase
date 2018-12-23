@@ -4,7 +4,7 @@
 #
 Name     : R-snakecase
 Version  : 0.9.2
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/snakecase_0.9.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/snakecase_0.9.2.tar.gz
 Summary  : Convert Strings into any Case
