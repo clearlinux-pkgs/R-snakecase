@@ -4,13 +4,15 @@
 #
 Name     : R-snakecase
 Version  : 0.9.2
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/snakecase_0.9.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/snakecase_0.9.2.tar.gz
 Summary  : Convert Strings into any Case
 Group    : Development/Tools
 License  : GPL-3.0
+Requires: R-rlang
 BuildRequires : R-markdown
+BuildRequires : R-rlang
 BuildRequires : R-tibble
 BuildRequires : buildreq-R
 
@@ -25,11 +27,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534353344
+export SOURCE_DATE_EPOCH=1552848348
 
 %install
+export SOURCE_DATE_EPOCH=1552848348
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1534353344
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -64,8 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library snakecase|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  snakecase || :
 
 
 %files
@@ -96,3 +97,17 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/snakecase/help/snakecase.rdx
 /usr/lib64/R/library/snakecase/html/00Index.html
 /usr/lib64/R/library/snakecase/html/R.css
+/usr/lib64/R/library/snakecase/tests/testthat.R
+/usr/lib64/R/library/snakecase/tests/testthat/helper-examples.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_any_case.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_lower_camel_case.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_lower_upper_case.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_mixed_case.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_parsed_case.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_parsed_case_internal.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_screaming_snake_case.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_sentence_case.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_snake_case.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_swap_case.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_upper_camel_case.R
+/usr/lib64/R/library/snakecase/tests/testthat/test-to_upper_lower_case.R
