@@ -4,16 +4,21 @@
 #
 Name     : R-snakecase
 Version  : 0.9.2
-Release  : 9
+Release  : 10
 URL      : https://cran.r-project.org/src/contrib/snakecase_0.9.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/snakecase_0.9.2.tar.gz
 Summary  : Convert Strings into any Case
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-cli
+Requires: R-pillar
+Requires: R-pkgconfig
+Requires: R-stringi
 BuildRequires : R-cli
 BuildRequires : R-markdown
+BuildRequires : R-pillar
+BuildRequires : R-pkgconfig
 BuildRequires : R-rlang
+BuildRequires : R-stringi
 BuildRequires : R-tibble
 BuildRequires : buildreq-R
 
@@ -28,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552850421
+export SOURCE_DATE_EPOCH=1552940037
 
 %install
-export SOURCE_DATE_EPOCH=1552850421
+export SOURCE_DATE_EPOCH=1552940037
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
