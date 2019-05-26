@@ -1,5 +1,6 @@
-0.10.0
+0.11.0
 R-cli
+R-evaluate
 R-markdown
 R-pillar
 R-pkgconfig
